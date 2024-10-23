@@ -21,14 +21,22 @@ function efectoHabilidades(){
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
     if(distancia_skills >= 300){
         let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("HTML");
-        habilidades[1].classList.add("CSS");
-        habilidades[2].classList.add("Csharp");
-        habilidades[3].classList.add("SQL");
-        habilidades[4].classList.add("marketing");
-        habilidades[5].classList.add("contabilidad");
-        habilidades[6].classList.add("ensenanza");
-        habilidades[7].classList.add("programacion");
+        const imagenes = [
+            'ruta/a/imagen-html.png',
+            'ruta/a/imagen-css.png',
+            'ruta/a/imagen-csharp.png',
+            'ruta/a/imagen-sql.png',
+            
+          
+'ruta/a/imagen-marketing.png',
+            'ruta/a/imagen-contabilidad.png',
+            'ruta/a/imagen-ensenanza.png',
+            'ruta/a/imagen-programacion.png'
+        ];
+        
+        for (let i = 0; i < habilidades.length; i++) {
+            habilidades[i].innerHTML = `<img src="${imagenes[i]}" alt="Habilidad ${i + 1}">`;
+        }
     }
 }
 
