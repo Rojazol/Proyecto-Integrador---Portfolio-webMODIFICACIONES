@@ -57,13 +57,13 @@ html{
 }
 /* SECCION I N I C I O */
 .inicio{
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(/img/fondo.jpg);
-    background-size: cover;
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
+    <section class="inicio">
+    <video autoplay loop muted playsinline class="video-fondo">
+        <source src="ruta/al/video.mp4" type="video/mp4">
+        <!-- Fuente de respaldo -->
+        <source src="ruta/al/video.webm" type="video/webm">
+        Tu navegador no soporta el video de fondo.
+    </video>
 }
 .inicio .contenido-banner{
     padding: 20px;
