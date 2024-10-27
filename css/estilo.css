@@ -512,7 +512,7 @@ html{
 /* SECCION CURSOS */
 .cursos {
     padding: 20px;
-    background-color: 381142;
+    background-color: #381142;
 }
 
 .cursos h2 {
@@ -544,6 +544,7 @@ html{
     opacity: 0;
     transform: translateX(-50px); /* Comienza desde la izquierda */
     transition: opacity 0.6s ease, transform 0.6s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra */
 }
 
 .curso.visible {
