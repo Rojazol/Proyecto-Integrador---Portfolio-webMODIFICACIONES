@@ -499,11 +499,11 @@ html{
 }
 
 .curso:nth-child(odd) { 
-    border-left: 10px solid #4caf50;
+    border-left: 10px solid #09ef39;
 }
 
 .curso:nth-child(even) { 
-    border-right: 10px solid #2196f3;
+    border-right: 10px solid #09ef39;
 }
 
 /* Efecto hover */
