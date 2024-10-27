@@ -508,7 +508,6 @@ html{
     margin-bottom: 0px;
 }
 
-
 /* SECCION CURSOS */
 .cursos {
     padding: 20px;
@@ -521,6 +520,7 @@ html{
     text-align: center;
     padding: 20px 0;
     margin-bottom: 20px;
+    color: #ffffff; /* Cambiamos color del título para mayor contraste */
 }
 
 * {
@@ -540,11 +540,11 @@ html{
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #ffffff;
     opacity: 0;
     transform: translateX(-50px); /* Comienza desde la izquierda */
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra */
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra para profundidad */
 }
 
 .curso.visible {
@@ -559,6 +559,18 @@ html{
 .curso:nth-child(even) { 
     border-right: 10px solid #2196f3;
 }
+
+/* Efecto hover */
+.curso:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Incremento de sombra en hover */
+    transform: translateY(-5px); /* Ligero desplazamiento hacia arriba */
+    border-color: #ff9800; /* Cambio de color de borde en hover */
+}
+
+
+
+
+
 
 
 /* SECCION CONTACTO */
