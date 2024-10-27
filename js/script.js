@@ -45,3 +45,19 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+// cursos
+document.addEventListener('DOMContentLoaded', function () {
+    const cursos = document.querySelectorAll('.curso');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Deja de observar una vez que es visible
+            }
+        });
+    }, { threshold: 0.1 }); // El 10% del elemento debe estar en pantalla para activarse
+
+    cursos.forEach(curso => observer.observe(curso));
+});
