@@ -106,6 +106,9 @@ toggleLanguage(); // Cambia de nuevo a español
     el.innerText = translations[newLang][key];
   });
 
+document.getElementById("toggleLanguage").addEventListener("click", function() {
+    currentLanguage = currentLanguage === "es" ? "en" : "es"; // Alternar idioma
+
   // Actualiza el texto del botón de idioma
   document.getElementById("language-toggle").innerText =
     newLang === "es" ? "English" : "Español";
