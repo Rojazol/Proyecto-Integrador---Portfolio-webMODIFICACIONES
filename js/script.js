@@ -64,50 +64,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // 4. Traducción de Idioma
-// Variable para rastrear el idioma actual (español por defecto)
-let isSpanish = true;
+let language = "es";
 
-// Texto en español e inglés para cada sección
-const content = {
-    inicio: {
-        es: `<h2>Inicio</h2><p>Bienvenido a mi portafolio profesional.</p>`,
-        en: `<h2>Home</h2><p>Welcome to my professional portfolio.</p>`
-    },
-    sobremi: {
-        es: `<h2>Sobre Mí</h2><p>Soy un profesional dedicado al desarrollo web y otras áreas técnicas.</p>`,
-        en: `<h2>About Me</h2><p>I am a professional dedicated to web development and other technical areas.</p>`
-    },
-    skills: {
-        es: `<h2>Skills</h2><p>Aquí se encuentran mis habilidades técnicas.</p>`,
-        en: `<h2>Skills</h2><p>Here are my technical skills.</p>`
-    },
-    curriculum: {
-        es: `<h2>Experiencia</h2><p>He trabajado en varios proyectos de desarrollo web.</p>`,
-        en: `<h2>Experience</h2><p>I have worked on several web development projects.</p>`
-    },
-    cursos: {
-        es: `<h2>Cursos</h2><p>He completado cursos en desarrollo web y tecnologías emergentes.</p>`,
-        en: `<h2>Courses</h2><p>I have completed courses in web development and emerging technologies.</p>`
-    },
-    contacto: {
-        es: `<h2>Contacto</h2><p>Para contactarme, utiliza el formulario a continuación.</p>`,
-        en: `<h2>Contact</h2><p>To contact me, please use the form below.</p>`
-    }
-};
-
-// Función para alternar entre español e inglés
 function toggleLanguage() {
-    isSpanish = !isSpanish;
-    const lang = isSpanish ? 'es' : 'en';
+    const elementsToTranslate = {
+        "INICIO": { "es": "INICIO", "en": "HOME" },
+        "SOBRE MI": { "es": "SOBRE MI", "en": "ABOUT ME" },
+        "SKILLS": { "es": "SKILLS", "en": "SKILLS" },
+        "EXPERIENCIA": { "es": "EXPERIENCIA", "en": "EXPERIENCE" },
+        "CURSOS": { "es": "CURSOS", "en": "COURSES" },
+        "CONTACTO": { "es": "CONTACTO", "en": "CONTACT" },
+        "Hola, me llamo Rocio Jazmin Olabiaga.": {
+            "es": "Hola, me llamo Rocio Jazmin Olabiaga.",
+            "en": "Hello, my name is Rocio Jazmin Olabiaga."
+        },
+        "Profesora": { "es": "Profesora", "en": "Teacher" },
+        // Agrega aquí más textos según sea necesario
+    };
 
-    // Cambiar el contenido de cada sección según el idioma seleccionado
-    document.getElementById("inicio").innerHTML = content.inicio[lang];
-    document.getElementById("sobremi").innerHTML = content.sobremi[lang];
-    document.getElementById("skills").innerHTML = content.skills[lang];
-    document.getElementById("curriculum").innerHTML = content.curriculum[lang];
-    document.getElementById("cursos").innerHTML = content.cursos[lang];
-    document.getElementById("contacto").innerHTML = content.contacto[lang];
+    // Alterna el idioma
+    language = language === "es" ? "en" : "es";
 
-    // Cambiar el texto del botón de traducción
-    document.getElementById("language-toggle").textContent = isSpanish ? "Español" : "Inglés";
+    // Cambia el texto de cada elemento
+    document.querySelectorAll("a, h1, h2, p, button").forEach(element => {
+        const textContent = element.textContent.trim();
+        if (elementsToTranslate[textContent]) {
+            element.textContent = elementsToTranslate[textContent][language];
+        }
+    });
+
+    // Cambia el texto del botón de traducción
+    document.getElementById("language-toggle").textContent = language === "es" ? "Español" : "English";
 }
+
