@@ -64,35 +64,51 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // 4. Traducción de Idioma
+// Traducciones completas para cada idioma
+const translations = {
+  es: {
+    inicio: "INICIO",
+    sobremi: "SOBRE MI",
+    skills: "SKILLS",
+    curriculum: "EXPERIENCIA",
+    cursos: "CURSOS",
+    contacto: "CONTACTO",
+    name: "Rocío Jazmín Olabiaga",
+    profession: "Profesora",
+  },
+  en: {
+    inicio: "HOME",
+    sobremi: "ABOUT ME",
+    skills: "SKILLS",
+    curriculum: "EXPERIENCE",
+    cursos: "COURSES",
+    contacto: "CONTACT",
+    name: "Rocío Jazmín Olabiaga",
+    profession: "Teacher",
+  }
+};
+
+let currentLanguage = "es";
+
 function toggleLanguage() {
-    const button = document.getElementById("language-toggle");
-    const language = button.dataset.language === "es" ? "en" : "es";
+  const newLang = currentLanguage === "es" ? "en" : "es";
 
-    const elementsToTranslate = {
-        "INICIO": { "es": "INICIO", "en": "HOME" },
-        "SOBRE MI": { "es": "SOBRE MI", "en": "ABOUT ME" },
-        "SKILLS": { "es": "SKILLS", "en": "SKILLS" },
-        "EXPERIENCIA": { "es": "EXPERIENCIA", "en": "EXPERIENCE" },
-        "CURSOS": { "es": "CURSOS", "en": "COURSES" },
-        "CONTACTO": { "es": "CONTACTO", "en": "CONTACT" },
-        "Hola, me llamo Rocio Jazmin Olabiaga.": {
-            "es": "Hola, me llamo Rocio Jazmin Olabiaga.",
-            "en": "Hello, my name is Rocio Jazmin Olabiaga."
-        },
-        "Profesora": { "es": "Profesora", "en": "Teacher" },
-        // Agrega aquí más textos según sea necesario
-    };
+  // Cambia el texto de los elementos con data-translate
+  document.querySelectorAll("[data-translate]").forEach((el) => {
+    const key = el.getAttribute("data-translate");
+    el.innerText = translations[newLang][key];
+  });
 
-    // Cambia el texto de cada elemento
-    document.querySelectorAll("a, h1, h2, p, button").forEach(element => {
-        const textContent = element.textContent.trim();
-        if (elementsToTranslate[textContent]) {
-            element.textContent = elementsToTranslate[textContent][language];
-        }
-    });
+  // Actualiza el texto del botón de idioma
+  document.getElementById("language-toggle").innerText =
+    newLang === "es" ? "Español" : "English";
 
-    // Cambia el texto del botón de traducción
-    button.textContent = language === "es" ? "Español" : "English";
-    button.dataset.language = language; // Guarda el nuevo idioma en el botón
+  // Cambia el idioma actual
+  currentLanguage = newLang;
 }
+
+// Ejecuta traducción al hacer clic en el botón
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("language-toggle").addEventListener("click", toggleLanguage);
+});
 
