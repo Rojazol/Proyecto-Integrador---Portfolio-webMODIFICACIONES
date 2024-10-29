@@ -16,42 +16,54 @@ function seleccionar(){
     menuVisible = false;
 }
 
+
 // Variable para rastrear el idioma actual (español por defecto)
 let isSpanish = true;
+
+// Texto en español e inglés para cada sección
+const content = {
+    inicio: {
+        es: `<h2>Inicio</h2><p>Bienvenido a mi portafolio profesional.</p>`,
+        en: `<h2>Home</h2><p>Welcome to my professional portfolio.</p>`
+    },
+    sobremi: {
+        es: `<h2>Sobre Mí</h2><p>Soy un profesional dedicado al desarrollo web y otras áreas técnicas.</p>`,
+        en: `<h2>About Me</h2><p>I am a professional dedicated to web development and other technical areas.</p>`
+    },
+    skills: {
+        es: `<h2>Skills</h2><p>Aquí se encuentran mis habilidades técnicas.</p>`,
+        en: `<h2>Skills</h2><p>Here are my technical skills.</p>`
+    },
+    curriculum: {
+        es: `<h2>Experiencia</h2><p>He trabajado en varios proyectos de desarrollo web.</p>`,
+        en: `<h2>Experience</h2><p>I have worked on several web development projects.</p>`
+    },
+    cursos: {
+        es: `<h2>Cursos</h2><p>He completado cursos en desarrollo web y tecnologías emergentes.</p>`,
+        en: `<h2>Courses</h2><p>I have completed courses in web development and emerging technologies.</p>`
+    },
+    contacto: {
+        es: `<h2>Contacto</h2><p>Para contactarme, utiliza el formulario a continuación.</p>`,
+        en: `<h2>Contact</h2><p>To contact me, please use the form below.</p>`
+    }
+};
 
 // Función para alternar entre español e inglés
 function toggleLanguage() {
     isSpanish = !isSpanish;
+    const lang = isSpanish ? 'es' : 'en';
 
-    document.getElementById("inicio").innerHTML = isSpanish 
-        ? `<h2>Inicio</h2><p>Bienvenido a mi portafolio profesional.</p>` 
-        : `<h2>Home</h2><p>Welcome to my professional portfolio.</p>`;
+    // Cambiar el contenido de cada sección según el idioma seleccionado
+    document.getElementById("inicio").innerHTML = content.inicio[lang];
+    document.getElementById("sobremi").innerHTML = content.sobremi[lang];
+    document.getElementById("skills").innerHTML = content.skills[lang];
+    document.getElementById("curriculum").innerHTML = content.curriculum[lang];
+    document.getElementById("cursos").innerHTML = content.cursos[lang];
+    document.getElementById("contacto").innerHTML = content.contacto[lang];
 
-    document.getElementById("sobremi").innerHTML = isSpanish 
-        ? `<h2>Sobre Mí</h2><p>Soy un profesional dedicado al desarrollo web y otras áreas técnicas.</p>` 
-        : `<h2>About Me</h2><p>I am a professional dedicated to web development and other technical areas.</p>`;
-
-    document.getElementById("skills").innerHTML = isSpanish 
-        ? `<h2>Skills</h2><p>Aquí se encuentran mis habilidades técnicas.</p>` 
-        : `<h2>Skills</h2><p>Here are my technical skills.</p>`;
-
-    document.getElementById("curriculum").innerHTML = isSpanish 
-        ? `<h2>Experiencia</h2><p>He trabajado en varios proyectos de desarrollo web.</p>` 
-        : `<h2>Experience</h2><p>I have worked on several web development projects.</p>`;
-
-    document.getElementById("cursos").innerHTML = isSpanish 
-        ? `<h2>Cursos</h2><p>He completado cursos en desarrollo web y tecnologías emergentes.</p>` 
-        : `<h2>Courses</h2><p>I have completed courses in web development and emerging technologies.</p>`;
-
-    document.getElementById("contacto").innerHTML = isSpanish 
-        ? `<h2>Contacto</h2><p>Para contactarme, utiliza el formulario a continuación.</p>` 
-        : `<h2>Contact</h2><p>To contact me, please use the form below.</p>`;
-
-    // Cambiar el texto del botón según el idioma actual
+    // Cambiar el texto del botón de traducción
     document.getElementById("language-toggle").textContent = isSpanish ? "Español" : "Inglés";
 }
-
-
 
 
 
