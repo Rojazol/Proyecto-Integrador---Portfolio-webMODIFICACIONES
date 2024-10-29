@@ -102,7 +102,7 @@ function toggleLanguage() {
 
   // Actualiza el texto del botón de idioma
   document.getElementById("language-toggle").innerText =
-    newLang === "es" ? "Español" : "English";
+    newLang === "es" ? "English" : "Español";
 
   // Cambia el idioma actual
   currentLanguage = newLang;
