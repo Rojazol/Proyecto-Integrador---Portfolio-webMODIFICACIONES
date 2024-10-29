@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // 4. Traducción de Idioma
 // Traducciones completas para cada idioma
+// Traducciones completas para cada idioma
 const translations = {
   es: {
     inicio: "INICIO",
@@ -111,4 +112,3 @@ function toggleLanguage() {
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("language-toggle").addEventListener("click", toggleLanguage);
 });
-
