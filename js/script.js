@@ -1,27 +1,30 @@
+// 1. Menú Responsivo
 let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
+
+// Función que oculta o muestra el menú
+function mostrarOcultarMenu() {
+    if (menuVisible) {
+        document.getElementById("nav").classList = "";
         menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
+    } else {
+        document.getElementById("nav").classList = "responsive";
         menuVisible = true;
     }
 }
 
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
+// Función que oculta el menú una vez que se selecciona una opción
+function seleccionar() {
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
 
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
+// 2. Animación de Habilidades
+function efectoHabilidades() {
+    const skills = document.getElementById("skills");
+    const distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+    
+    if (distancia_skills >= 300) {
+        const habilidades = document.getElementsByClassName("progreso");
         const imagenes = [
             'ruta/a/imagen-html.png',
             'ruta/a/imagen-css.png',
@@ -39,13 +42,12 @@ function efectoHabilidades(){
     }
 }
 
-
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
+// Detectar scrolling para aplicar la animación de la barra de habilidades
+window.onscroll = function() {
     efectoHabilidades();
-} 
+}
 
-// cursos
+// 3. Animación de Cursos
 document.addEventListener('DOMContentLoaded', function () {
     const cursos = document.querySelectorAll('.curso');
 
@@ -56,11 +58,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 observer.unobserve(entry.target); // Deja de observar una vez que es visible
             }
         });
-    }, { threshold: 0.1 }); // El 10% del elemento debe estar en pantalla para activarse
+    }, { threshold: 0.1 });
 
     cursos.forEach(curso => observer.observe(curso));
 });
 
+// 4. Traducción de Idioma
 // Variable para rastrear el idioma actual (español por defecto)
 let isSpanish = true;
 
@@ -108,4 +111,3 @@ function toggleLanguage() {
     // Cambiar el texto del botón de traducción
     document.getElementById("language-toggle").textContent = isSpanish ? "Español" : "Inglés";
 }
-
