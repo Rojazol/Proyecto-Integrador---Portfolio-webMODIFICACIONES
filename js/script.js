@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // 4. Traducción de Idioma
 // Traducciones completas para cada idioma
-// Traducciones completas para cada idioma
 const translations = {
   es: {
     inicio: "INICIO",
@@ -89,10 +88,17 @@ const translations = {
   }
 };
 
-let currentLanguage = "es";
+let currentLanguage = "es"; // Idioma actual
 
 function toggleLanguage() {
   const newLang = currentLanguage === "es" ? "en" : "es";
+     currentLanguage = newLang;
+  console.log(`El idioma ha cambiado a: ${currentLanguage}`);
+}
+
+// Llamar a la función para alternar el idioma
+toggleLanguage(); // Cambia a inglés
+toggleLanguage(); // Cambia de nuevo a español
 
   // Cambia el texto de los elementos con data-translate
   document.querySelectorAll("[data-translate]").forEach((el) => {
