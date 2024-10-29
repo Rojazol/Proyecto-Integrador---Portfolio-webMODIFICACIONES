@@ -64,9 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // 4. Traducción de Idioma
-let language = "es";
-
 function toggleLanguage() {
+    const button = document.getElementById("language-toggle");
+    const language = button.dataset.language === "es" ? "en" : "es";
+
     const elementsToTranslate = {
         "INICIO": { "es": "INICIO", "en": "HOME" },
         "SOBRE MI": { "es": "SOBRE MI", "en": "ABOUT ME" },
@@ -82,9 +83,6 @@ function toggleLanguage() {
         // Agrega aquí más textos según sea necesario
     };
 
-    // Alterna el idioma
-    language = language === "es" ? "en" : "es";
-
     // Cambia el texto de cada elemento
     document.querySelectorAll("a, h1, h2, p, button").forEach(element => {
         const textContent = element.textContent.trim();
@@ -94,6 +92,7 @@ function toggleLanguage() {
     });
 
     // Cambia el texto del botón de traducción
-    document.getElementById("language-toggle").textContent = language === "es" ? "Español" : "English";
+    button.textContent = language === "es" ? "Español" : "English";
+    button.dataset.language = language; // Guarda el nuevo idioma en el botón
 }
 
