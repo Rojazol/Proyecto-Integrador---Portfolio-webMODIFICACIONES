@@ -94,6 +94,7 @@ function toggleLanguage() {
   const newLang = currentLanguage === "es" ? "en" : "es";
      currentLanguage = newLang;
   console.log(`El idioma ha cambiado a: ${currentLanguage}`);
+     updateLanguage();
 }
 
 // Llamar a la función para alternar el idioma
