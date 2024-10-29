@@ -90,35 +90,26 @@ const translations = {
 
 let currentLanguage = "es"; // Idioma actual
 
-function toggleLanguage() {
-  const newLang = currentLanguage === "es" ? "en" : "es";
-     currentLanguage = newLang;
-  console.log(`El idioma ha cambiado a: ${currentLanguage}`);
-     updateLanguage();
-}
-
-// Llamar a la función para alternar el idioma
-toggleLanguage(); // Cambia a inglés
-toggleLanguage(); // Cambia de nuevo a español
-
-  // Cambia el texto de los elementos con data-translate
+function updateLanguage() {
   document.querySelectorAll("[data-translate]").forEach((el) => {
     const key = el.getAttribute("data-translate");
-    el.innerText = translations[newLang][key];
+    el.innerText = translations[currentLanguage][key];
   });
+}
 
-document.getElementById("toggleLanguage").addEventListener("click", function() {
-    currentLanguage = currentLanguage === "es" ? "en" : "es"; // Alternar idioma
+// Función para alternar el idioma
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "es" ? "en" : "es"; // Alternar idioma
+  updateLanguage(); // Actualizar el idioma de los elementos
 
   // Actualiza el texto del botón de idioma
-  document.getElementById("language-toggle").innerText =
-    newLang === "es" ? "English" : "Español";
-
-  // Cambia el idioma actual
-  currentLanguage = newLang;
+  document.getElementById("toggleLanguage").innerText =
+    currentLanguage === "es" ? "English" : "Español";
 }
 
 // Ejecuta traducción al hacer clic en el botón
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("language-toggle").addEventListener("click", toggleLanguage);
-});
+  document.getElementById("toggleLanguage").addEventListener("click", toggleLanguage);
+}); 
+
+
