@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // 4. Traducción de Idioma
 function toggleLanguage() {
     const button = document.getElementById("language-toggle");
-    const language = button.dataset.language === "es" ? "en" : "es";
+    const language = button.dataset.language === "es" ? "en" : "en";
 
     const elementsToTranslate = {
         "INICIO": { "es": "INICIO", "en": "HOME" },
