@@ -31,8 +31,6 @@ html{
     font-family: 'Roboto Slab', serif;
     font-size: 36px;
     color: transparent;
-    -webkit-background-clip: text;
-   /* -webkit-text-fill-color: transparent;*/
     background: linear-gradient(90deg, #be20b7, #2e1225); /* Colores del degradado */
     text-decoration: none;
 }
