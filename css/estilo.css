@@ -50,7 +50,8 @@ html{
     transform: translateY(-2px), scale(2); /* Eleva el botón */
     transition: box-shadow 0.3s ease; /* Suaviza la transición */
     border-radius: 5px; /* Bordes redondeados */
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    background: linear-gradient(90deg, #be20b7, #2e1225);
+     transform: scale(2); /* Eleva el botón */
 }
 
 .nav-responsive{
