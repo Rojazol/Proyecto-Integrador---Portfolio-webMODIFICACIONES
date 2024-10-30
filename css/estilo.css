@@ -594,6 +594,9 @@ html{
     position: relative;
     z-index: 10;
     border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en hover */
+    transform: translateY(-2px); /* Eleva el botón */
+    transition: box-shadow 0.3s ease; /* Suaviza la transición */
 }
 .contacto button .overlay{
     position: absolute;
