@@ -26,12 +26,19 @@ html{
     align-items: center;
     padding: 15px 20px;
 }
+
 .contenedor-header header .logo a{
     font-family: 'Roboto Slab', serif;
     font-size: 36px;
     color: #e723c7;
     text-decoration: none;
 }
+.contenedor-header header .logo a:hover{
+    color: transparent;
+    background-clip: text;
+    background: linear-gradient(90deg, #be20b7, #2e1225); /* Colores del degradado */
+    }
+
 .contenedor-header header ul{
     display: flex;
     list-style: none;
