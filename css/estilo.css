@@ -60,7 +60,7 @@ html{
     transition: box-shadow 0.3s ease; /* Suaviza la transición */
     border-radius: 5px; /* Bordes redondeados */
     background: linear-gradient(90deg, #be20b7, #2e1225);
-     transform: scale(2); /* Eleva el botón */
+    transform: scale(2); /* Eleva el botón */
 }
 
 .nav-responsive{
@@ -691,7 +691,7 @@ footer .arriba{
 }
 
 footer .arriba:hover{
-    -webkit-transform: scale(3);
+    transform: scale(3);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
