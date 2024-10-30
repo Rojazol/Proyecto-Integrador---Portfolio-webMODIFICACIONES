@@ -593,6 +593,7 @@ html{
     color: #fff;
     position: relative;
     z-index: 10;
+    border-radius: 5px; /* Bordes redondeados */
 }
 .contacto button .overlay{
     position: absolute;
@@ -603,7 +604,6 @@ html{
     background-color: #ec84de;
     z-index: -1;
     transition: 1s;
-    border-radius: 5px; /* Bordes redondeados */
 }
 .contacto button:hover .overlay{
     width: 100%;
