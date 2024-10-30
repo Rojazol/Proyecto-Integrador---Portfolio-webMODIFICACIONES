@@ -665,6 +665,8 @@ footer .redes a:hover {
     background: linear-gradient(90deg, #be20b7, #2e1225);
 }
 
+/*boton arriba */
+
 footer .arriba{
     display: block;
     width: 50px;
@@ -678,6 +680,10 @@ footer .arriba{
     border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
+}
+
+footer .arriba:hover{
+    tranform: scale(3);
 }
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
