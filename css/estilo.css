@@ -691,7 +691,7 @@ footer .arriba{
 }
 
 footer .arriba:hover{
-    tranform: scale(3);
+    -webkit-transform: scale(3);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
