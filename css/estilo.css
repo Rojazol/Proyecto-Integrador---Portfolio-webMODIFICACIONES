@@ -122,11 +122,12 @@ html{
     font-size: 20px;
     transition: .3s;
 }
+
 .inicio .contenido-banner .redes a:hover{
     /* background-color: #b61cae; */
     background: linear-gradient(90deg, #be20b7, #2e1225);
-
 }
+
 .sobremi{
     background-color: #30152c;
     color: #fff;
