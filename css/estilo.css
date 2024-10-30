@@ -39,6 +39,7 @@ html{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background: linear-gradient(90deg, #be20b7, #2e1225); /* Colores del degradado */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra en el estado hover */
     }
 
 .contenedor-header header ul{
@@ -672,6 +673,7 @@ footer .redes a{
 }
 footer .redes a:hover {
     background: linear-gradient(90deg, #be20b7, #2e1225);
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra en el estado hover */
 }
 
 /*boton arriba */
