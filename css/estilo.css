@@ -45,13 +45,14 @@ html{
     text-decoration: none;
 }
 .contenedor-header header nav ul li a:hover{
-    color: #b61c9c;
+    color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en hover */
     transform: translateY(-2px); /* Eleva el botón */
     transition: box-shadow 0.3s ease; /* Suaviza la transición */
     border-radius: 5px; /* Bordes redondeados */
     background: linear-gradient(90deg, #6a11cb, #2575fc);
 }
+
 .nav-responsive{
     background-color: #b61c9c;
     color:#fff;
