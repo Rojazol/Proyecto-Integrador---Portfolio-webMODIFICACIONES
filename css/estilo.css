@@ -30,16 +30,13 @@ html{
 .contenedor-header header .logo a{
     font-family: 'Roboto Slab', serif;
     font-size: 36px;
-    color: #e723c7;
-    text-decoration: none;
-}
-
-.contenedor-header header .logo a:hover{
     color: transparent;
     -webkit-background-clip: text;
    /* -webkit-text-fill-color: transparent;*/
     background: linear-gradient(90deg, #be20b7, #2e1225); /* Colores del degradado */
-    }
+    text-decoration: none;
+}
+
 
 .contenedor-header header ul{
     display: flex;
