@@ -18,6 +18,17 @@ function seleccionar() {
     menuVisible = false;
 }
 
+// Función para animar el botón con efecto de rebote al hacer clic
+function animarBoton(boton) {
+    // Añade la clase de animación
+    boton.classList.add('activo');
+    
+    // Remueve la clase después de 150 ms para volver al tamaño original
+    setTimeout(() => {
+        boton.classList.remove('activo');
+    }, 50);
+}
+
 // 2. Animación de Habilidades
 function efectoHabilidades() {
     const skills = document.getElementById("skills");
