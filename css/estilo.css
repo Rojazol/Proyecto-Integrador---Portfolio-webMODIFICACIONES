@@ -47,11 +47,10 @@ html{
 .contenedor-header header nav ul li a:hover{
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en hover */
-    transform: translateY(-2px), scale(1.2); /* Eleva el botón */
+    transform: translateY(-2px), scale(2); /* Eleva el botón */
     transition: box-shadow 0.3s ease; /* Suaviza la transición */
     border-radius: 5px; /* Bordes redondeados */
     background: linear-gradient(90deg, #6a11cb, #2575fc);
-    
 }
 
 .nav-responsive{
