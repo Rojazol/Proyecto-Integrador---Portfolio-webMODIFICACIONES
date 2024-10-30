@@ -657,7 +657,7 @@ footer .redes a{
     font-size: 20px;
     transition: .3s;
 }
-footer .redes a: hover {
+footer .redes a:hover {
     background: linear-gradient(90deg, #be20b7, #2e1225);
 }
 
