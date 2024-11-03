@@ -477,14 +477,12 @@ html{
     position: relative;
     bottom: 4px;
 }
-
 /* SECCION PORTFOLIO cambie a SECCION CURSOS */
 .cursos {
     padding: 20px;
     background-color: #381142;
     padding: 50px 20px;
 }
-
 .cursos h2 {
     font-size: 48px;
     font-family: 'Roboto Slab', serif;
@@ -537,10 +535,6 @@ html{
     transform: translateY(-5px); /* Ligero desplazamiento hacia arriba */
     border-color: #ff9800; /* Cambio de color de borde en hover */
 }
-
-
-
-
 
 
 
