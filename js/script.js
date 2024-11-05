@@ -40,11 +40,6 @@ function efectoHabilidades() {
             'ruta/a/imagen-html.png',
             'ruta/a/imagen-css.png',
             'ruta/a/imagen-csharp.png',
-            'ruta/a/imagen-sql.png',
-            'ruta/a/imagen-marketing.png',
-            'ruta/a/imagen-contabilidad.png',
-            'ruta/a/imagen-ensenanza.png',
-            'ruta/a/imagen-programacion.png'
         ];
         
         for (let i = 0; i < habilidades.length; i++) {
