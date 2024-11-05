@@ -272,20 +272,41 @@ html{
     display: block;
     margin-bottom: 10px;
 }
+/* Barra de progreso */
 .skills .skill .barra-skill{
     height: 8px;
-    width: 80%;
+    width: 100%;
     background-color: #351129;
     position: relative;
     margin-bottom: 30px;
 }
+/* Barra verde */
 .skills .skill .progreso{
-    background-color: #d3f24a;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 8px;
+     height: 100%;
+    background-color: green; /* Barra verde */
+    position: relative;
+    text-align: right;
+    line-height: 8px;
+    color: white;
+    font-weight: bold;
+    transition: width 2s ease-out; /* Animación suave */
 }
+/* Círculo con porcentaje */
+.skills .skill .porcentaje {
+    position: absolute;
+    top: -10px;
+    right: -18px;
+    width: 30px;
+    height: 30px;
+    background-color: #94035d; /* Color del círculo */
+    border-radius: 50%;
+    color: white;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    transition: right 2s ease-out;
+}
+
 .skills .skill .barra-skill div{
     position: absolute;
     height: 40px;
